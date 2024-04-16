@@ -1,13 +1,15 @@
 import pytest
-from selenium import webdriver
+from selene import browser
+
+
+browser.config.driver_name = 'firefox'
 
 
 @pytest.fixture(autouse=True)
-def open_browser():
+def open_browser(request):
     """
     Open browser
     """
-    # Инициализация драйвера
-    driver = webdriver.Firefox()
-    yield driver
-    # Здесь не будет закрытия браузера после завершения теста
+    browser.open(request.param)
+    yield browser
+    browser.quit()
