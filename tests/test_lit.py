@@ -1,4 +1,3 @@
-import comments as comments
 from selene import query
 from selene.support.conditions import be, have
 from tests.selectors import SELECTOR_FILTER_BY_FANTASY, SELECTOR_SORT_BY_COMMENTS, SELECTOR_COUNTERS, SELECTOR_BOOK_INFO
@@ -12,19 +11,9 @@ def test_litgorod_sort_comments_by_desc():
 
     comments_list = [int(element.get(query.text)) for element in browser.all(SELECTOR_COUNTERS)]
 
-
-    # flag = 0
-    # i = 1
-    # while i < len(comments):
-    #     if comments[i] >= comments[i - 1]:
-    #         flag = 1
-    #     i += 1
-    #
-    # assert flag == 0
-
     comments_sorted = sorted(comments_list, reverse=True)
 
-    assert sorted(comments_list) == sorted(comments_sorted), "Error: lists do not match"
+    assert comments_list == comments_sorted, "Error: lists do not match"
 
 
 def test_litgorod_filter_by_fantasy():
