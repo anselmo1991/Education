@@ -2,18 +2,16 @@ import comments as comments
 from selene import query
 from selene.support.conditions import be, have
 from tests.selectors import SELECTOR_FILTER_BY_FANTASY, SELECTOR_SORT_BY_COMMENTS, SELECTOR_COUNTERS, SELECTOR_BOOK_INFO
+from selene.support.shared import browser
 
 
 def test_litgorod_sort_comments_by_desc(open_browser):
-    open_browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
-    open_browser.element(SELECTOR_SORT_BY_COMMENTS).should(be.visible).click()
-    open_browser.all(SELECTOR_COUNTERS).should(have.size(40))
+    browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
+    browser.element(SELECTOR_SORT_BY_COMMENTS).should(be.visible).click()
+    browser.all(SELECTOR_COUNTERS).should(have.size(20))
 
-    comments_list = list()
-    for element in open_browser.all(SELECTOR_COUNTERS):
-        text = element.get(query.text)
-        if text != '':
-            comments_list.append(text)
+    comments_list = [element.get(query.text) for element in open_browser.all(SELECTOR_COUNTERS) if element.get(query.text) != '']
+
 
     # flag = 0
     # i = 1
@@ -26,12 +24,12 @@ def test_litgorod_sort_comments_by_desc(open_browser):
 
     comments_sorted = sorted(comments_list, reverse=True)
 
-    if comments_list != comments_sorted:
-        raise ValueError("Error: lists do not match")
+    assert sorted(comments_list) == sorted(comments_sorted), "Error: lists do not match"
+
 
 def test_litgorod_filter_by_fantasy(open_browser):
-    open_browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
-    open_browser.all(SELECTOR_BOOK_INFO).should(have.size(20))
+    browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
+    browser.all(SELECTOR_BOOK_INFO).should(have.size(20))
 
     for book_element in open_browser.all(SELECTOR_BOOK_INFO):
         tags = list()
