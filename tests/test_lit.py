@@ -5,12 +5,12 @@ from tests.selectors import SELECTOR_FILTER_BY_FANTASY, SELECTOR_SORT_BY_COMMENT
 from selene.support.shared import browser
 
 
-def test_litgorod_sort_comments_by_desc(open_browser):
+def test_litgorod_sort_comments_by_desc():
     browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
     browser.element(SELECTOR_SORT_BY_COMMENTS).should(be.visible).click()
     browser.all(SELECTOR_COUNTERS).should(have.size(20))
 
-    comments_list = [element.get(query.text) for element in open_browser.all(SELECTOR_COUNTERS) if element.get(query.text) != '']
+    comments_list = [int(element.get(query.text)) for element in browser.all(SELECTOR_COUNTERS)]
 
 
     # flag = 0
@@ -27,11 +27,11 @@ def test_litgorod_sort_comments_by_desc(open_browser):
     assert sorted(comments_list) == sorted(comments_sorted), "Error: lists do not match"
 
 
-def test_litgorod_filter_by_fantasy(open_browser):
+def test_litgorod_filter_by_fantasy():
     browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
     browser.all(SELECTOR_BOOK_INFO).should(have.size(20))
 
-    for book_element in open_browser.all(SELECTOR_BOOK_INFO):
+    for book_element in browser.all(SELECTOR_BOOK_INFO):
         tags = list()
         for element in book_element.all('a'):
             tags.append(element.get(query.text).strip())
