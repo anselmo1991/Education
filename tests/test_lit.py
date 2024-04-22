@@ -1,15 +1,14 @@
 from selene import query
 from selene.support.conditions import be, have
-from tests.selectors import SELECTOR_FILTER_BY_FANTASY, SELECTOR_SORT_BY_COMMENTS, SELECTOR_COUNTERS, SELECTOR_BOOK_INFO
-from selene.support.shared import browser
-
+from tests.main_page import fantasy_category
+from tests.search_results_page import comments_filter, books, all_counters
 
 def test_litgorod_sort_comments_by_desc():
-    browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
-    browser.element(SELECTOR_SORT_BY_COMMENTS).should(be.visible).click()
-    browser.all(SELECTOR_COUNTERS).should(have.size(20))
+    fantasy_category.should(be.visible).click()
+    comments_filter.should(be.visible).click()
+    all_counters.should(have.size(20))
 
-    comments_list = [int(element.get(query.text)) for element in browser.all(SELECTOR_COUNTERS)]
+    comments_list = [int(element.get(query.text)) for element in all_counters]
 
     comments_sorted = sorted(comments_list, reverse=True)
 
@@ -17,10 +16,10 @@ def test_litgorod_sort_comments_by_desc():
 
 
 def test_litgorod_filter_by_fantasy():
-    browser.element(SELECTOR_FILTER_BY_FANTASY).should(be.visible).click()
-    browser.all(SELECTOR_BOOK_INFO).should(have.size(20))
+    fantasy_category.should(be.visible).click()
+    books.should(have.size(20))
 
-    for book_element in browser.all(SELECTOR_BOOK_INFO):
+    for book_element in books:
         tags = list()
         for element in book_element.all('a'):
             tags.append(element.get(query.text).strip())
