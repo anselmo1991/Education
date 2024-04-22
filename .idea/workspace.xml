@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
-      <change afterPath="$PROJECT_DIR$/tests/main_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/search_results_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/search_results_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/PageObjects/search_results_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_lit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_lit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +70,12 @@
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\PageObjects" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\test_framework\core" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in bin">
+  <component name="RunManager" selected="Python tests.pytest for test_lit.test_litgorod">
     <configuration name="pytest for test_lit.test_litgorod" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Education" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713525306863</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="New project">
+      <option name="closed" value="true" />
+      <created>1713786120075</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713786120075</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,5 +213,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New project" />
     <option name="LAST_COMMIT_MESSAGE" value="New project" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PageObjects/main_page.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fixtures/open_browser.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
