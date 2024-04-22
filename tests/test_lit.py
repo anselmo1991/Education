@@ -1,16 +1,16 @@
-from PageObjects.main_page import click_fantasy_category
-from PageObjects.search_results_page import find_comments_filter, find_all_counters, check_comments_order, find_books, \
-    fantasy_check
+from page_objects.main_page import fantasy_category
+from page_objects.search_results_page import range_comments, counters_list
+from page_objects.search_results_page import check_comments_order, books_list, fantasy_check
 
 
-def test_litgorod_sort_comments_by_desc():
-    click_fantasy_category
-    find_comments_filter
-    find_all_counters
-    check_comments_order
+def test_litgorod_sort_comments_by_desc(open_browser):
+    fantasy_category()
+    range_comments()
+    counters_list()
+    check_comments_order()
 
 
 def test_litgorod_filter_by_fantasy():
-    click_fantasy_category
-    find_books
-    fantasy_check
+    fantasy_category()
+    books_list()
+    fantasy_check()
