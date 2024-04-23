@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
-      <change afterPath="$PROJECT_DIR$/page_objects/main_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/main_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/search_results_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/search_results_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixtures/open_browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/search_results_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/search_results_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_lit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_lit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +70,7 @@
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\tests" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\PageObjects" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\test_framework\core" />
@@ -213,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713791826812</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="New project">
+      <option name="closed" value="true" />
+      <created>1713797709571</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713797709571</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,12 +243,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_lit.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fixtures/open_browser.py</url>
+          <url>file://$PROJECT_DIR$/tests/conftest.py</url>
           <line>13</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
