@@ -8,7 +8,7 @@ all_counters = browser.all('//div[contains(@class,"b-btn-mobile_none")]//div['
 books = browser.all('//div[@class="b-book_item__info"]/div/div[2]')
 
 
-def range_comments():
+def sort_books_by_comments_number():
     comments_filter.should(be.visible).click()
 
 
@@ -16,11 +16,11 @@ def counters_list():
     return all_counters.should(have.size(20))
 
 
-def books_list():
+def should_see_twenty_books_in_search_results():
     return books.should(have.size(20))
 
 
-def check_comments_order():
+def books_should_be_sorted_by_comments_descending():
     comments_list = [int(element.get(query.text)) for element in all_counters]
     comments_sorted = sorted(comments_list, reverse=True)
     assert comments_list == comments_sorted, "Error: lists do not match"
