@@ -1,7 +1,7 @@
 import pytest
 from page_objects.main_page import go_to_genre
-from page_objects.search_results_page import sort_books_by_comments_number, counters_list
-from page_objects.search_results_page import check_comments_order, books_list, genre_check
+from page_objects.search_results_page import should_see_twenty_books_in_search_results, counters_list
+from page_objects.search_results_page import sort_books_by_comments_number, books_should_be_sorted_by_comments_descending, genre_check
 
 
 @pytest.mark.parametrize("genre_name", ["Фэнтези", "Боевик"])
