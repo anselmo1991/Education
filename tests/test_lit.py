@@ -6,7 +6,7 @@ from page_objects.search_results_page import sort_books_by_comments_number, \
     books_should_be_sorted_by_comments_descending, books_genre_should_match_with_genre_filter
 
 
-@allure.title("Comparing the order of numbers in comments")
+@allure.title("check_descending_order_of_comments")
 @allure.description("We compare whether the list with the number of comments received on the site coincides with the "
                     "descending list of the number of comments.")
 @pytest.mark.parametrize("genre_name", ["Фэнтези", "Боевик"])
@@ -17,7 +17,7 @@ def test_litgorod_sort_comments_by_desc(genre_name):
         books_should_be_sorted_by_comments_descending()
 
 
-@allure.title("A comparison of the book's genre")
+@allure.title("check_genre_of_books")
 @allure.description("We compare whether at least one genre of the book matches the selected one")
 @pytest.mark.parametrize("genre_name", ["Фэнтези", "Боевик"])
 def test_litgorod_filter_by_fantasy(genre_name):
