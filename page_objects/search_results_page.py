@@ -12,7 +12,7 @@ def sort_books_by_comments_number():
     comments_filter.should(be.visible).click()
 
 
-def counters_list():
+def find_list_of_comments_counters():
     return all_counters.should(have.size(20))
 
 
@@ -26,7 +26,7 @@ def books_should_be_sorted_by_comments_descending():
     assert comments_list == comments_sorted, "Error: lists do not match"
 
 
-def genre_check(genre):
+def books_genre_should_match_with_genre_filter(genre):
     for book_element in books:
         tags = list()
         for element in book_element.all('a'):
