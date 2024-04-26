@@ -5,13 +5,9 @@ from tests.constants import TEST_URL
 
 
 # browser.config.driver_name = os.getenv("DEFAULT_BROWSER", "firefox")
-def setup(self):
-    options = webdriver.ChromeOptions()
-    self.driver = webdriver.Remote(
-        command_executor="https://USERNAME:localhost",
-        options=options
-    )
-    self.driver.implicitly_wait(30)
+options = webdriver.ChromeOptions()
+browser.config.driver_options = options
+browser.config.driver_remote_url = 'http://localhost:4444'
 
 
 @pytest.fixture(autouse=True)
