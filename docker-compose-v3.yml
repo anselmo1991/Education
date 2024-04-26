@@ -10,6 +10,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - DEFAULT_BROWSER=chrome
 
   firefox:
     image: selenium/node-firefox:4.7.2-20221219
@@ -21,6 +22,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - DEFAULT_BROWSER=firefox
 
   edge:
     image: selenium/node-edge:4.7.2-20221219
@@ -31,6 +33,7 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - DEFAULT_BROWSER=edge
 
   selenium-hub:
     image: selenium/hub:4.7.2-20221219

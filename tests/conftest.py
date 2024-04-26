@@ -8,10 +8,8 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from tests.constants import TEST_URL
 
 
-browser.config.driver_name = os.getenv("DEFAULT_BROWSER", "firefox")
-
-
-def choose_browser(browser_name):
+def choose_browser():
+    browser_name = os.getenv("DEFAULT_BROWSER", "firefox")
     if browser_name == 'chrome':
         options = ChromeOptions()
     elif browser_name == 'firefox':
