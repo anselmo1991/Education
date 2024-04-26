@@ -19,12 +19,13 @@ def choose_browser():
     else:
         raise ValueError("Unsupported browser name")
 
-    browser.config.driver_remote_url = 'http://localhost:444'
+    browser.config.driver_remote_url = 'http://localhost:4444'
     browser.config.driver_options = options
 
 
 @pytest.fixture(autouse=True)
 def open_browser():
+    choose_browser()
     browser.open(TEST_URL)
     yield browser
     browser.quit()
