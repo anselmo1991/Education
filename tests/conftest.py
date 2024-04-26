@@ -1,27 +1,32 @@
 import pytest
+import os
 from selene import browser
-from selenium import webdriver
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.edge.options import Options as EdgeOptions
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+
 from tests.constants import TEST_URL
 
 
-# browser.config.driver_name = os.getenv("DEFAULT_BROWSER", "firefox")
+browser.config.driver_name = os.getenv("DEFAULT_BROWSER", "firefox")
+
+
 def choose_browser(browser_name):
     if browser_name == 'chrome':
-        option = webdriver.ChromeOptions()
+        options = ChromeOptions()
     elif browser_name == 'firefox':
-        option = webdriver.FirefoxOptions()
+        options = FirefoxOptions()
     elif browser_name == 'edge':
-        option = webdriver.EdgeOptions()
+        options = EdgeOptions()
     else:
         raise ValueError("Unsupported browser name")
 
     browser.config.driver_remote_url = 'http://localhost:444'
-    browser.config.driver_options = option
+    browser.config.driver_options = options
 
 
 @pytest.fixture(autouse=True)
-def open_browser(browser_name):
-    choose_browser(browser_name)
+def open_browser():
     browser.open(TEST_URL)
     yield browser
     browser.quit()
