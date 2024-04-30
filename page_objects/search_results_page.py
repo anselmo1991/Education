@@ -7,6 +7,9 @@ comments_filter = browser.element('//a[text()=" По количеству ком
 all_counters = browser.all('//div[contains(@class,"b-btn-mobile_none")]//div['
                            '@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]')
 books = browser.all('//div[@class="b-book_item__info"]/div/div[2]')
+add_book_to_library = browser.element("//div[@class='h2']//a[contains(text(), ' Сын маминой подруги')]/ancestor::div[@class='b-book_item__content']//a[contains(@class, 'b-btn_add-to-library')]")
+my_library = browser.element("//div[@class='b-header__menu']//a[contains(@href, "
+                             "'https://litgorod.ru/user/library?status=1')]")
 
 
 @allure.step("Sort books by number of comments")
@@ -39,3 +42,13 @@ def books_genre_should_match_with_genre_filter(genre):
             tags.append(element.get(query.text).strip())
         is_genre = any((genre.lower() in item.lower()) for item in tags)
         assert is_genre
+
+
+@allure.step("Add book to the library")
+def add_book_to_the_library():
+    add_book_to_library.should(be.visible).click()
+
+
+@allure.step("Go to my library")
+def go_to_my_library():
+    my_library.should(be.visible).click()
