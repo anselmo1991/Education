@@ -2,7 +2,8 @@ import allure
 from page_objects.main_page import open_login_form, fill_password_form, fill_email_form, click_login_button
 from page_objects.main_page import go_to_novels
 from page_objects.search_results_page import add_book_to_the_library, go_to_my_library
-from page_objects.my_library import find_book_in_the_library, delete_book_from_the_library
+from page_objects.my_library import find_book_in_the_library, delete_book_from_the_library, open_exit_from_profile_menu
+from page_objects.my_library import push_exit_button
 
 
 @allure.title("Checking whether a book has been added to the library")
@@ -18,3 +19,5 @@ def test_the_book_has_been_added_to_the_library():
     go_to_my_library()
     find_book_in_the_library()
     delete_book_from_the_library()
+    open_exit_from_profile_menu()
+    push_exit_button()
