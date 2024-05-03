@@ -12,7 +12,7 @@ exit_button = browser.element("//div[@class='col-6 mb-2']/a")
 
 @allure.step("Find the book in the library")
 def find_book_in_the_library(book_title):
-    assert_that(books.filtered_by(lambda x: BookElement(x).title().text == book_title), has_length(1))
+    assert_that(books.by_their(lambda x: BookElement(x).title(), have.exact_text(book_title)).should(have.size(1)))
 
 
 @allure.step("Confirm deletion of the book")
