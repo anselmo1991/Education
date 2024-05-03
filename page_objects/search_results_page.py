@@ -1,15 +1,19 @@
 import allure
 from selene import query
+from hamcrest import assert_that, equal_to, is_in, has_length
 from selene.support.conditions import be, have
 from selene.support.shared import browser
+from page_objects.book_items import BookElement
 
 comments_filter = browser.element('//a[text()=" По количеству комментариев "]')
-all_counters = browser.all('//div[contains(@class,"b-btn-mobile_none")]//div['
-                           '@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]')
-books = browser.all('//div[@class="b-book_item__info"]/div/div[2]')
-add_book_to_library = browser.element("//div[@class='h2']//a[contains(text(), ' Сын маминой подруги')]/ancestor::div[@class='b-book_item__content']//a[contains(@class, 'b-btn_add-to-library')]")
-my_library = browser.element("//div[@class='b-header__menu']//a[contains(@href, "
-                             "'https://litgorod.ru/user/library?status=1')]")
+books = browser.all("//div[@class='b-book_item']")
+
+
+@allure.step("Find a book by title")
+def get_book_by_title(book_title):
+    book = books.should(have.size_greater_than(0)).by_their(lambda x: BookElement(x).title(),
+                                                            have.text(book_title)).should(have.size(1))[0]
+    return BookElement(book)
 
 
 @allure.step("Sort books by number of comments")
@@ -18,8 +22,10 @@ def sort_books_by_comments_number():
 
 
 @allure.step("Create a list of 20 comment counters")
-def find_list_of_comments_counters():
-    return all_counters.should(have.size(20))
+def get_list_of_comments_counters():
+    list_of_comments = [int(BookElement(book).number_of_comments().get(query.text)) for book in books]
+    assert_that(list_of_comments, has_length(20))
+    return list_of_comments
 
 
 @allure.step("Form a list of 20 books found")
@@ -29,26 +35,14 @@ def should_see_twenty_books_in_search_results():
 
 @allure.step("Check if the comments are arranged in descending order")
 def books_should_be_sorted_by_comments_descending():
-    comments_list = [int(element.get(query.text)) for element in all_counters]
+    comments_list = get_list_of_comments_counters()
     comments_sorted = sorted(comments_list, reverse=True)
-    assert comments_list == comments_sorted, "Error: lists do not match"
+    assert_that(comments_list, equal_to(comments_sorted), "Error: lists do not match")
 
 
 @allure.step("Check if the selected genre is present in the book")
 def books_genre_should_match_with_genre_filter(genre):
     for book_element in books:
-        tags = list()
-        for element in book_element.all('a'):
-            tags.append(element.get(query.text).strip())
-        is_genre = any((genre.lower() in item.lower()) for item in tags)
-        assert is_genre
-
-
-@allure.step("Add book to the library")
-def add_book_to_the_library():
-    add_book_to_library.should(be.visible).click()
-
-
-@allure.step("Go to my library")
-def go_to_my_library():
-    my_library.should(be.visible).click()
+        genre = genre.lower()
+        tags = [element.get(query.text).strip().lower() for element in book_element.all('a')]
+        assert_that(genre, is_in(tags), f"Genre '{genre}' is not found in book tags")

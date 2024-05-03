@@ -1,28 +1,18 @@
 import allure
-from selene.support.conditions import be
+from hamcrest import assert_that, has_length
+from selene.support.conditions import be, have
 from selene.support.shared import browser
+from page_objects.book_items import BookElement
 
-book_search = browser.element("//div[@class='h2']//a[contains(text(), ' Сын маминой подруги')]")
-read_button = browser.element("//div[@class='h2']//a[contains(text(), ' Сын маминой подруги')]//ancestor::div[@class='b-book_item__header']/following-sibling::div[2]//div[@class='status-library__button']//a")
-delete_button = browser.element("//div[@class='h2']//a[contains(text(), ' Сын маминой подруги')]//ancestor::div[@class='b-book_item__header']/following-sibling::div[2]//div[@class='b-menu_drop active']/ul/li[6]/a")
+books = browser.all("//div[@class='b-book_item']")
 confirm_delete = browser.element("//div[@class='col-6 mb-2']/a")
 exit_menu_button = browser.element("//div[@class='b-menu_side']/ul/li[14]/a")
 exit_button = browser.element("//div[@class='col-6 mb-2']/a")
 
 
 @allure.step("Find the book in the library")
-def find_book_in_the_library():
-    assert book_search.should(be.visible), "Expected 1 book to be found in the library"
-
-
-@allure.step("Open book menu")
-def click_menu_button():
-    read_button.should(be.visible).click()
-
-
-@allure.step("Delete the book from the library")
-def delete_book_from_the_library():
-    delete_button.should(be.visible).click()
+def find_book_in_the_library(book_title):
+    assert_that(books.filtered_by(lambda x: BookElement(x).title().text == book_title), has_length(1))
 
 
 @allure.step("Confirm deletion of the book")

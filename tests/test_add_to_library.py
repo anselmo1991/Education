@@ -1,25 +1,28 @@
 import allure
-from page_objects.main_page import open_login_form, fill_password_form, fill_email_form, click_login_button
+from page_objects.header import open_login_form, fill_password_form, fill_email_form, click_login_button, \
+    go_to_my_library
 from page_objects.main_page import go_to_novels
-from page_objects.search_results_page import add_book_to_the_library, go_to_my_library
-from page_objects.my_library import find_book_in_the_library, delete_book_from_the_library, open_exit_from_profile_menu
-from page_objects.my_library import push_exit_button, click_menu_button, confirm_deletion
+from page_objects.search_results_page import get_book_by_title
+from page_objects.my_library import find_book_in_the_library, open_exit_from_profile_menu
+from page_objects.my_library import push_exit_button, confirm_deletion
 
 
 @allure.title("Checking whether a book has been added to the library")
 @allure.description(
     'We go to the site, add the selected book to the library, check whether the added book is in the user’s library')
 def test_the_book_has_been_added_to_the_library():
+    book_title = 'Сын маминой подруги'
     open_login_form()
     fill_email_form()
     fill_password_form()
     click_login_button()
     go_to_novels()
-    add_book_to_the_library()
+    book = get_book_by_title(book_title)
+    book.click_to_library_button()
     go_to_my_library()
-    find_book_in_the_library()
-    click_menu_button()
-    delete_book_from_the_library()
+    find_book_in_the_library(book_title)
+    book.click_menu_in_library_button()
+    book.click_delete_from_library_button()
     confirm_deletion()
     open_exit_from_profile_menu()
     push_exit_button()
