@@ -12,7 +12,7 @@ login_button = browser.element('//a[@id="authorization_form_button_login"]')
 my_library = browser.element("//div[@class='b-header__menu']//a[contains(@href, "
                              "'https://litgorod.ru/user/library?status=1')]")
 books_dropdown = browser.element("//div[@class='b-header__menu']//li[1]/a")
-genre_dropdown = browser.all("//li[@class='b-header_dropdown__link']")
+genre_dropdown = browser.all("//li[@class='b-header_dropdown__link']/a")
 
 
 @allure.step("Open login form")
@@ -45,19 +45,6 @@ def open_books_dropdown():
     books_dropdown.should(be.visible).click()
 
 
-class GenreElement(Element):
-
-    def __init__(self, locator):
-        super().__init__(locator, browser.config)
-
-    def genre_name(self):
-        return self.element("./a")
-
-    @allure.step("Click genre link")
-    def click_genre_link(self):
-        self.genre_name().click()
-
-
 @allure.step("Find genre in dropdown")
-def find_genre_in_dropdown(genre):
-    assert_that(genre_dropdown.by_their(lambda x: GenreElement(x).genre_name(), have.exact_text(genre)).should(have.size(1)))
+def click_genre_in_dropdown(genre):
+    genre_dropdown.by_their(lambda x: x, have.text(genre)).should(have.size(1))[0].click()
