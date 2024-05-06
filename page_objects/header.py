@@ -9,6 +9,8 @@ password_input = browser.element('//input[@id="authorization_form_field_pass"]')
 login_button = browser.element('//a[@id="authorization_form_button_login"]')
 my_library = browser.element("//div[@class='b-header__menu']//a[contains(@href, "
                              "'https://litgorod.ru/user/library?status=1')]")
+books_dropdown = browser.element("//div[@class='b-header__menu']//li[1]/a")
+genre_dropdown = browser.element("//div[@class='b-header_dropdown__genre']//li/a[contains(text(),genre)]")
 
 
 @allure.step("Open login form")
@@ -34,3 +36,13 @@ def click_login_button():
 @allure.step("Go to my library")
 def go_to_my_library():
     my_library.should(be.visible).click()
+
+
+@allure.step("Open books dropdown")
+def open_books_dropdown():
+    books_dropdown.should(be.visible).click()
+
+
+@allure.step("Choose genre in dropdown")
+def choose_genre_in_dropdown(genre):
+    genre_dropdown.should(be.visible).click()

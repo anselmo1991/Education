@@ -3,10 +3,14 @@ from selene import query
 from hamcrest import assert_that, equal_to, is_in, has_length
 from selene.support.conditions import be, have
 from selene.support.shared import browser
+from selenium.webdriver import Keys
+
 from page_objects.book_items import BookElement
 
 comments_filter = browser.element('//a[text()=" По количеству комментариев "]')
 books = browser.all("//div[@class='b-book_item']")
+search_field = browser.element("//div[@class='b-input b-input-block']//input")
+search_button = browser.element("//div[@class='b-input b-input-block hover focus']//a")
 
 
 @allure.step("Find a book by title")
@@ -46,3 +50,13 @@ def books_genre_should_match_with_genre_filter(genre):
         genre = genre.lower()
         tags = [element.get(query.text).strip().lower() for element in book_element.all('a')]
         assert_that(genre, is_in(tags), f"Genre '{genre}' is not found in book tags")
+
+
+@allure.step("Fill book's name in search field")
+def fill_book_name_in_search_field(book_title):
+    search_field.should(be.visible).type(book_title).type(Keys.ENTER)
+
+
+@allure.step("Click search button")
+def click_search_button():
+    search_button.should(be.present).click()
