@@ -10,7 +10,7 @@ from page_objects.book_items import BookElement
 comments_filter = browser.element('//a[text()=" По количеству комментариев "]')
 books = browser.all("//div[@class='b-book_item']")
 search_field = browser.element("//div[@class='b-input b-input-block']//input")
-search_button = browser.element("//div[@class='b-input b-input-block hover focus']//a")
+search_button = browser.element("//div[@class='b-input b-input-block']//a")
 
 
 @allure.step("Find a book by title")
@@ -54,9 +54,9 @@ def books_genre_should_match_with_genre_filter(genre):
 
 @allure.step("Fill book's name in search field")
 def fill_book_name_in_search_field(book_title):
-    search_field.should(be.visible).type(book_title).type(Keys.ENTER)
+    search_field.should(be.visible).send_keys(book_title, Keys.ENTER)
 
 
 @allure.step("Click search button")
 def click_search_button():
-    search_button.should(be.present).click()
+    search_button.should(be.visible).click()

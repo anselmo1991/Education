@@ -10,7 +10,7 @@ login_button = browser.element('//a[@id="authorization_form_button_login"]')
 my_library = browser.element("//div[@class='b-header__menu']//a[contains(@href, "
                              "'https://litgorod.ru/user/library?status=1')]")
 books_dropdown = browser.element("//div[@class='b-header__menu']//li[1]/a")
-genre_dropdown = browser.element("//div[@class='b-header_dropdown__genre']//li/a[contains(text(),genre)]")
+genre_dropdown = browser.element("//div[@class='b-header_dropdown__genre']//li/a[contains(text(), '{}')]")
 
 
 @allure.step("Open login form")
@@ -45,4 +45,4 @@ def open_books_dropdown():
 
 @allure.step("Choose genre in dropdown")
 def choose_genre_in_dropdown(genre):
-    genre_dropdown.should(be.visible).click()
+    genre_dropdown.should(be.visible).with_(genre).click()

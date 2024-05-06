@@ -17,10 +17,12 @@ class BookElement(Element):
         return self.element(".//div[@class='b-btn-mobile_none']/div/a")
 
     def number_of_comments(self):
-        return self.element('.//div[contains(@class,"b-btn-mobile_none")]//div[@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]')
+        return self.element(
+            './/div[contains(@class,"b-btn-mobile_none")]//div[@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]')
 
     def book_menu_button(self):
-        return self.element(".//div[@class='col-12 col-xl-auto b-btn-mobile_none']//div[@class='status-library__button']//a[1]")
+        return self.element(
+            ".//div[@class='col-12 col-xl-auto b-btn-mobile_none']//div[@class='status-library__button']//a[1]")
 
     def delete_button(self):
         return self.element(".//div[@class='b-menu_drop active']/ul/li[6]/a")
@@ -36,3 +38,17 @@ class BookElement(Element):
     @allure.step("Open book menu in library")
     def click_menu_in_library_button(self):
         self.book_menu_button().click()
+
+    def read_button(self):
+        return self.element(".//div[@class='mb-05 mb-sm-1']/a")
+
+    @allure.step("Click read button")
+    def click_read_button(self):
+        self.read_button().click()
+
+    def prochitano_button(self):
+        return self.element(".//div[@class='b-menu_drop active']/ul/li[3]/a")
+
+    @allure.step("Click Prochitano button")
+    def click_prochitano_button(self):
+        self.prochitano_button().click()
