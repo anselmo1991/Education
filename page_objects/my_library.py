@@ -8,6 +8,8 @@ books = browser.all("//div[@class='b-book_item']")
 confirm_delete = browser.element("//div[@class='col-6 mb-2']/a")
 exit_menu_button = browser.element("//div[@class='b-menu_side']/ul/li[14]/a")
 exit_button = browser.element("//div[@class='col-6 mb-2']/a")
+dropdown_menu = browser.element("//div[@class='ui-select w-auto mb-2']/button")
+prochitano = browser.element("//div[@class='options-wrapper hidden visible']/div/div[4]")
 
 
 @allure.step("Find the book in the library")
@@ -28,3 +30,13 @@ def open_exit_from_profile_menu():
 @allure.step("Push exit button")
 def push_exit_button():
     exit_button.should(be.visible).click()
+
+
+@allure.step("Click dropdown menu")
+def click_dropdown_menu():
+    dropdown_menu.should(be.visible).click()
+
+
+@allure.step("Click Prochitano")
+def click_prochitano():
+    prochitano.should(be.visible).click()
