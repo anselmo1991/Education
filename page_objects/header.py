@@ -1,7 +1,5 @@
 import allure
-from hamcrest import assert_that
 from selene.support.shared import browser
-from selene import Element
 from selene.support.conditions import be, have
 from tests.constants import TEST_PASSWORD, TEST_LOGIN
 
