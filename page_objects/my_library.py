@@ -1,5 +1,5 @@
 import allure
-from hamcrest import assert_that, has_length
+from hamcrest import assert_that
 from selene.support.conditions import be, have
 from selene.support.shared import browser
 from page_objects.book_items import BookElement
