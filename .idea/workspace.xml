@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
+      <change afterPath="$PROJECT_DIR$/tests/api_tests/test_booking_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_objects/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_other_add_to_library_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_other_add_to_library_flow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,7 +439,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714995552933</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="New project">
+      <option name="closed" value="true" />
+      <created>1714998221909</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1714998221909</updated>
+    </task>
+    <task id="LOCAL-00044" summary="New project">
+      <option name="closed" value="true" />
+      <created>1714999599039</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1714999599039</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
