@@ -6,14 +6,9 @@ pipeline {
                 sh '/var/jenkins_home/venv/bin/pip install -r requirements.txt'
             }
         }
-        stage('Create allure results dir') {
-            steps {
-                sh 'mkdir -p ./allure_results'
-            }
-        }
         stage('Run tests') {
             steps {
-                sh '/var/jenkins_home/venv/bin/pytest --alluredir=allure_results -n auto --reruns 2 --clean-alluredir'
+                sh '/var/jenkins_home/venv/bin/pytest --alluredir=allure_results -n auto --reruns 2'
             }
         }
         stage('Prepare test results') {
