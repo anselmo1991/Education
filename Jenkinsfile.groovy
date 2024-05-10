@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                sh 'pipx install -r requirements.txt'
+                sh 'pipx install requirements.txt'
             }
         }
         stage('Run tests') {
