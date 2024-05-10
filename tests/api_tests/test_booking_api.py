@@ -1,6 +1,7 @@
 import requests
 import pytest
 import allure
+from hamcrest import assert_that, equal_to, has_item
 
 BASE_URL = "https://restful-booker.herokuapp.com"
 
@@ -32,18 +33,18 @@ def headers_(auth_token_):
 @allure.step("Login with token")
 def test_login():
     response = requests.post(f"{BASE_URL}/auth", json={"username": USERNAME, "password": PASSWORD})
-    assert response.status_code == 200
+    assert_that(response.status_code, equal_to(200))
 
 
 @allure.step("Create booking")
 def test_create_booking(headers_):
     response = requests.post(f"{BASE_URL}/booking", json=BOOKING_DATA, headers=headers_)
-    assert response.status_code == 200
+    assert_that(response.status_code, equal_to(200))
 
 
 @allure.step("Check that booking was created")
 def test_check_booking_creation(headers_):
     response = requests.get(f"{BASE_URL}/booking", headers=headers_)
-    assert response.status_code == 200
-    booking_id = response.json()[-1]["bookingid"]
-    assert booking_id is not None
+    assert_that(response.status_code, equal_to(200))
+    booking_ids = [booking["bookingid"] for booking in response.json()]
+    assert_that(booking_ids, has_item(BOOKING_DATA["firstname"]))
