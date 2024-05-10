@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.9.7'
-            args '-v C:/Users/Sofia_Shilova/PycharmProjects/Education'
-        }
-    }
+    agent any
     stages {
         stage('Install dependencies') {
             steps {
