@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                sh '/var/jenkins_home/venv/bin/pipx install -r requirements.txt'
+                sh '/var/jenkins_home/venv/bin/pip install -r requirements.txt'
             }
         }
         stage('Run tests') {
