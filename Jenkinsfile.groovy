@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Activate venv') {
             steps {
-                sh 'source /var/jenkins_home/venv/bin/activate'
+                sh '. /var/jenkins_home/venv/bin/activate'
             }
         }
         stage('Install dependencies') {
