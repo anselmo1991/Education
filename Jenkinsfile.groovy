@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'python:latest'
-            args '-v C:\Users\Sofia_Shilova\PycharmProjects\Education>:/app'
+            image 'python:3.9.7'
+            args '-v C:/Users/Sofia_Shilova/PycharmProjects/Education'
         }
     }
     stages {
