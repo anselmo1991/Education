@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run tests') {
             steps {
-                sh 'pytest --alluredir=allure_results -n auto --reruns 2 --clean-alluredir' //
+                sh '/var/jenkins_home/venv/bin/python pytest --alluredir=allure_results -n auto --reruns 2 --clean-alluredir' //
             }
         }
         stage('Prepare test results') {
