@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Create allure results dir') {
             steps {
-                sh 'mkdir ./allure_results'
+                sh 'mkdir -p ./allure_results'
             }
         }
         stage('Run tests') {
