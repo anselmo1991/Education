@@ -11,9 +11,13 @@ pipeline {
                 sh '/var/jenkins_home/venv/bin/pytest --alluredir=allure_results -n auto --reruns 2'
             }
         }
-        stage('Prepare test results') {
-            steps {
-                sh 'allure serve allure_results'
+    }
+    post {
+        always {
+            stage('Prepare test results') {
+                steps {
+                    sh 'allure serve allure_results'
+                }
             }
         }
     }
