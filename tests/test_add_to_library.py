@@ -11,7 +11,7 @@ from page_objects.my_library import push_exit_button, confirm_deletion
 @allure.description(
     'We go to the site, add the selected book to the library, check whether the added book is in the user’s library')
 def test_the_book_has_been_added_to_the_library():
-    book_title = 'Сын маминой подруги'
+    book_title = 'Помощница для большого босса'
     open_login_form()
     fill_email_form()
     fill_password_form()
