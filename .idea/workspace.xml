@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile.groovy" afterDir="false" />
-    </list>
+    <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,14 +130,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712562559406</updated>
-    </task>
-    <task id="LOCAL-00016" summary="New project">
-      <option name="closed" value="true" />
-      <created>1713882186026</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713882186026</updated>
     </task>
     <task id="LOCAL-00017" summary="New project">
       <option name="closed" value="true" />
@@ -526,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715596748830</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715603146283</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1715603146283</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
