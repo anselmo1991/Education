@@ -14,11 +14,10 @@ pipeline {
     }
     post {
         always {
-            stage('Prepare test results') {
-                steps {
-                    sh 'allure serve allure_results'
-                }
+            steps {
+                sh 'allure serve allure_results'
             }
         }
     }
 }
+
