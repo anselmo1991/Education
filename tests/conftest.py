@@ -19,7 +19,7 @@ def choose_browser():
     else:
         raise ValueError("Unsupported browser name")
 
-    browser.config.driver_remote_url = 'http://localhost:4444'
+    browser.config.driver_remote_url = 'http://selenium-hub:4444'
     browser.config.driver_options = options
 
 
