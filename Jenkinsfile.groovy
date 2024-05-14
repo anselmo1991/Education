@@ -14,9 +14,7 @@ pipeline {
     }
     post {
         always {
-            steps {
-                sh 'allure serve allure_results'
-            }
+            sh 'allure serve allure_results'
         }
     }
 }
