@@ -6,15 +6,23 @@ pipeline {
                 sh '/var/jenkins_home/venv/bin/pip install -r requirements.txt'
             }
         }
+        stage('Clean artefacts') {
+            steps {
+                rm ./allure-results -r
+            }
+            steps {
+                rm ./allure-report -r
+            }
+        }
         stage('Run tests') {
             steps {
-                sh '/var/jenkins_home/venv/bin/pytest --alluredir=allure_results -n auto --reruns 2'
+                sh '/var/jenkins_home/venv/bin/pytest --alluredir=allure-results -n auto --reruns 2'
             }
         }
     }
     post {
         always {
-            sh 'allure generate ./allure_results'
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
         }
     }
 }
