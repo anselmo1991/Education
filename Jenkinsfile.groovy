@@ -14,7 +14,7 @@ pipeline {
     }
     post {
         always {
-            sh '/var/jenkins_home/venv/bin/allure serve allure_results'
+            sh '/var/jenkins_home/allure serve allure_results'
         }
     }
 }
