@@ -6,11 +6,6 @@ pipeline {
                 sh '/var/jenkins_home/venv/bin/pip install -r requirements.txt'
             }
         }
-        stage('Clean artefacts') {
-            steps {
-                sh 'rm ./allure-results -r -f'
-                sh 'rm ./allure-report -r -f'
-            }
         }
         stage('Run tests') {
             steps {
