@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
-from tests.constants import TEST_URL
+from tests.web_tests.constants import TEST_URL
 
 
 def choose_browser():

@@ -6,7 +6,7 @@ from hamcrest import assert_that, equal_to, has_item
 BASE_URL = "https://restful-booker.herokuapp.com"
 
 USERNAME = "admin"
-PASSWORD = "password"
+PASSWORD = "password123"
 BOOKING_DATA = {
     "firstname": "John",
     "lastname": "Doe",
@@ -19,7 +19,7 @@ BOOKING_DATA = {
 
 
 @pytest.fixture
-def auth_token():
+def auth_token_():
     response = requests.post(f"{BASE_URL}/auth", json={"username": USERNAME, "password": PASSWORD})
     token = response.json()["token"]
     return token

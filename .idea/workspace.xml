@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
+      <change afterPath="$PROJECT_DIR$/tests/web_tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-v3.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-v3.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/header.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_add_to_library.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/test_add_to_library.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_other_add_to_library_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/test_other_add_to_library_flow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +74,7 @@
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\tests\web_tests" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\tests" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education" />
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\PageObjects" />
@@ -136,54 +141,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712562559406</updated>
-    </task>
-    <task id="LOCAL-00023" summary="New project">
-      <option name="closed" value="true" />
-      <created>1713970842594</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1713970842594</updated>
-    </task>
-    <task id="LOCAL-00024" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714052052019</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1714052052019</updated>
-    </task>
-    <task id="LOCAL-00025" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714121814456</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1714121814456</updated>
-    </task>
-    <task id="LOCAL-00026" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714129269850</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1714129269850</updated>
-    </task>
-    <task id="LOCAL-00027" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714130981757</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1714130981757</updated>
-    </task>
-    <task id="LOCAL-00028" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714131206007</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1714131206007</updated>
     </task>
     <task id="LOCAL-00029" summary="New project">
       <option name="closed" value="true" />
@@ -529,7 +486,55 @@
       <option name="project" value="LOCAL" />
       <updated>1715671666040</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715671787294</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1715671787302</updated>
+    </task>
+    <task id="LOCAL-00073" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715672980631</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1715672980631</updated>
+    </task>
+    <task id="LOCAL-00074" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715674388638</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674388638</updated>
+    </task>
+    <task id="LOCAL-00075" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715674475299</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674475299</updated>
+    </task>
+    <task id="LOCAL-00076" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715674516125</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674516125</updated>
+    </task>
+    <task id="LOCAL-00077" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715674645307</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674645307</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

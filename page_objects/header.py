@@ -1,7 +1,7 @@
 import allure
 from selene.support.shared import browser
 from selene.support.conditions import be, have
-from tests.constants import TEST_PASSWORD, TEST_LOGIN
+from tests.web_tests.constants import TEST_PASSWORD, TEST_LOGIN
 
 login_form = browser.element('//div[@class ="b-header__auth"]//a')
 email_input = browser.element('//input[@id="authorization_form_field_email"]')
