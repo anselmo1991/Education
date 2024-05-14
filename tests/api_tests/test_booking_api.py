@@ -36,6 +36,7 @@ def headers_(auth_token_):
 def test_login():
     response = requests.post(f"{BASE_URL}/auth", json={"username": USERNAME, "password": PASSWORD})
     assert_that(response.status_code, equal_to(200))
+    assert_that(response.json()["token"], equal_to("abc123"))
 
 
 @allure.step("Create booking")
