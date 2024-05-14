@@ -6,7 +6,6 @@ pipeline {
                 sh '/var/jenkins_home/venv/bin/pip install -r requirements.txt'
             }
         }
-        }
         stage('Run tests') {
             steps {
                 sh '/var/jenkins_home/venv/bin/pytest --alluredir=allure-results -n auto --reruns 2'
@@ -18,4 +17,4 @@ pipeline {
             allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
         }
     }
-
+}
