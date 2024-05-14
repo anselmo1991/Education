@@ -1,7 +1,7 @@
 import requests
 import pytest
 import allure
-from hamcrest import assert_that, equal_to, has_item
+from hamcrest import assert_that, equal_to, has_item, has_key
 
 BASE_URL = "https://restful-booker.herokuapp.com"
 
@@ -36,7 +36,7 @@ def headers_(auth_token_):
 def test_login():
     response = requests.post(f"{BASE_URL}/auth", json={"username": USERNAME, "password": PASSWORD})
     assert_that(response.status_code, equal_to(200))
-    assert_that(response.json()["token"], equal_to("abc123"))
+    assert_that(response.json(), has_key("token"))
 
 
 @allure.step("Create booking")
