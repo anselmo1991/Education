@@ -10,9 +10,11 @@ PASSWORD = "password123"
 BOOKING_DATA = {
     "firstname": "John",
     "lastname": "Doe",
+    "totalprice": 111,
+    "depositpaid": True,
     "bookingdates": {
-        "checkin": "2024-04-17",
-        "checkout": "2024-04-18"
+        "checkin": "2024-05-17",
+        "checkout": "2024-05-18"
     },
     "additionalneeds": "Breakfast"
 }
@@ -40,11 +42,9 @@ def test_login():
 def test_create_booking(headers_):
     response = requests.post(f"{BASE_URL}/booking", json=BOOKING_DATA, headers=headers_)
     assert_that(response.status_code, equal_to(200))
+    bookingid = response.json()['bookingid']
 
-
-@allure.step("Check that booking was created")
-def test_check_booking_creation(headers_):
     response = requests.get(f"{BASE_URL}/booking", headers=headers_)
     assert_that(response.status_code, equal_to(200))
     booking_ids = [booking["bookingid"] for booking in response.json()]
-    assert_that(booking_ids, has_item(BOOKING_DATA["firstname"]))
+    assert_that(booking_ids, has_item(bookingid))
