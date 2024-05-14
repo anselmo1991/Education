@@ -4,7 +4,8 @@ from selene import browser
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-
+import allure
+from selene.support.shared import browser
 from tests.web_tests.constants import TEST_URL
 
 
@@ -29,3 +30,11 @@ def open_browser():
     browser.open(TEST_URL)
     yield browser
     browser.quit()
+
+
+def pytest_exception_interact(node, call, report):
+    if report.failed:
+        try:
+            allure.attach(browser.driver.get_screenshot_as_png(), name="screenshot", attachment_type=allure.attachment_type.PNG)
+        except Exception as e:
+            print(f"Failed to take screenshot: {e}")

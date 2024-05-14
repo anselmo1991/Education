@@ -32,14 +32,14 @@ def headers_(auth_token_):
     return {"Content-Type": "application/json", "Accept": "application/json", "Cookie": f"token={auth_token_}"}
 
 
-@allure.step("Login with token")
+@allure.title("Login with token")
 def test_login():
     response = requests.post(f"{BASE_URL}/auth", json={"username": USERNAME, "password": PASSWORD})
     assert_that(response.status_code, equal_to(200))
     assert_that(response.json(), has_key("token"))
 
 
-@allure.step("Create booking")
+@allure.title("Create booking")
 def test_create_booking(headers_):
     response = requests.post(f"{BASE_URL}/booking", json=BOOKING_DATA, headers=headers_)
     assert_that(response.status_code, equal_to(200))
