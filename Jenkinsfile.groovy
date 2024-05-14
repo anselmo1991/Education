@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Clean artefacts') {
             steps {
-                sh 'rm ./allure-results -r'
-                sh 'rm ./allure-report -r'
+                sh 'rm ./allure-results -r -f'
+                sh 'rm ./allure-report -r -f'
             }
         }
         stage('Run tests') {
