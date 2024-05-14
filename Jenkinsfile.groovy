@@ -14,7 +14,7 @@ pipeline {
     }
     post {
         always {
-            sh 'allure serve allure_results'
+            sh 'allure serve -p 64000 ./allure_results'
         }
     }
 }
