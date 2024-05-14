@@ -9,8 +9,6 @@ pipeline {
         stage('Clean artefacts') {
             steps {
                 sh 'rm ./allure-results -r'
-            }
-            steps {
                 sh 'rm ./allure-report -r'
             }
         }
