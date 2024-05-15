@@ -33,6 +33,7 @@ def headers_(auth_token_):
 
 
 @allure.title("Login with token")
+@pytest.mark.api
 def test_login():
     response = requests.post(f"{BASE_URL}/auth", json={"username": USERNAME, "password": PASSWORD})
     assert_that(response.status_code, equal_to(200))
@@ -40,6 +41,7 @@ def test_login():
 
 
 @allure.title("Create booking")
+@pytest.mark.api
 def test_create_booking(headers_):
     response = requests.post(f"{BASE_URL}/booking", json=BOOKING_DATA, headers=headers_)
     assert_that(response.status_code, equal_to(200))

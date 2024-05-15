@@ -1,4 +1,6 @@
 import allure
+import pytest
+
 from page_objects.header import open_login_form, fill_password_form, fill_email_form, click_login_button, \
     go_to_my_library
 from page_objects.main_page import go_to_novels
@@ -10,6 +12,7 @@ from page_objects.my_library import push_exit_button, confirm_deletion
 @allure.title("Checking whether a book has been added to the library")
 @allure.description(
     'We go to the site, add the selected book to the library, check whether the added book is in the user’s library')
+@pytest.mark.web
 def test_the_book_has_been_added_to_the_library():
     book_title = 'Помощница для большого босса'
     open_login_form()

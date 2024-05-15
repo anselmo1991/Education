@@ -9,6 +9,7 @@ from page_objects.search_results_page import sort_books_by_comments_number, \
 @allure.title("Check descending order of comments")
 @allure.description("We compare whether the list with the number of comments received on the site coincides with the "
                     "descending list of the number of comments.")
+@pytest.mark.web
 @pytest.mark.parametrize("genre_name", ["Фэнтези", "Боевик"])
 def test_litgorod_sort_comments_by_desc(genre_name):
     go_to_genre(genre_name)
@@ -19,6 +20,7 @@ def test_litgorod_sort_comments_by_desc(genre_name):
 
 @allure.title("Check genre of books")
 @allure.description("We compare whether at least one genre of the book matches the selected one")
+@pytest.mark.web
 @pytest.mark.parametrize("genre_name", ["Фэнтези", "Боевик"])
 def test_litgorod_filter_by_fantasy(genre_name):
     go_to_genre(genre_name)
