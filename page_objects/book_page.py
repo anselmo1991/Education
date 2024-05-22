@@ -1,10 +1,16 @@
 import allure
-from selene.support.shared import browser
 from selene.support.conditions import be
+from page_objects.utils import element
 
-forward_button = browser.element("//div[@class='b-paging__container']//div[@class='_next']//a")
-in_library_button = browser.element("//div[@class='b-annotation_button']/a")
-sign_in_button = browser.element("//div[@class='register__signin']//a")
+forward_button = element({
+    "PC": "//div[@class='b-paging__container']//div[@class='_next']//a",
+    "MOBILE": "//div[@class='b-paging__container']//div[@class='_next']//a"})
+in_library_button = element({
+    "PC": "//div[@class='b-annotation_button']/a",
+    "MOBILE": "//div[@class='b-annotation_button']/a"})
+sign_in_button = element({
+    "PC": "//div[@class='register__signin']//a",
+    "MOBILE": "//div[@class='register__signin']//a"})
 
 
 @allure.step("Click forward button")

@@ -2,15 +2,22 @@ import allure
 from selene import query
 from hamcrest import assert_that, equal_to, is_in, has_length
 from selene.support.conditions import be, have
-from selene.support.shared import browser
 from selenium.webdriver import Keys
-
 from page_objects.book_items import BookElement
+from page_objects.utils import element, elements
 
-comments_filter = browser.element('//a[text()=" По количеству комментариев "]')
-books = browser.all("//div[@class='b-book_item']")
-search_field = browser.element("//div[@class='b-input b-input-block']//input")
-search_button = browser.element("//div[@class='b-input b-input-block']//a")
+comments_filter = element({
+    "PC": '//a[text()=" По количеству комментариев "]',
+    "MOBILE": '//a[text()=" По количеству комментариев "]'})
+books = elements({
+    "PC": "//div[@class='b-book_item']",
+    "MOBILE": "//div[@class='b-book_item']"})
+search_field = element({
+    "PC": "//div[@class='b-input b-input-block']//input",
+    "MOBILE": "//div[@class='b-input b-input-block']//input"})
+search_button = element({
+    "PC": "//div[@class='b-input b-input-block']//a",
+    "MOBILE": "//div[@class='b-input b-input-block']//a"})
 
 
 @allure.step("Find a book by title")

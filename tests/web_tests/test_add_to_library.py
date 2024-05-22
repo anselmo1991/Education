@@ -1,8 +1,7 @@
 import allure
 import pytest
 
-from page_objects.header import open_login_form, fill_password_form, fill_email_form, click_login_button, \
-    go_to_my_library
+from page_objects.header import open_login_form, fill_email_form, fill_password_form, click_login_button, go_to_my_library
 from page_objects.main_page import go_to_novels
 from page_objects.search_results_page import get_book_by_title
 from page_objects.my_library import find_book_in_the_library, open_exit_from_profile_menu

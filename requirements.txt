@@ -6,3 +6,4 @@ pytest-xdist~=3.5.0
 pytest-rerunfailures~=14.0
 requests~=2.31.0
 pyhamcrest~=2.1.0
+Appium-Python-Client~=4.0.0

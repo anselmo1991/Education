@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
+      <change afterPath="$PROJECT_DIR$/page_objects/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/api_tests/test_booking_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/api_tests/test_booking_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/book_items.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/book_items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/book_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/book_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/header.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/my_library.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/my_library.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_objects/search_results_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/search_results_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/web_tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/web_tests/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/web_tests/test_add_to_library.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/test_add_to_library.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/web_tests/test_lit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/test_lit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/web_tests/test_other_add_to_library_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/test_other_add_to_library_flow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Sofia_Shilova/PycharmProjects/Education/tests/fixture_test",
-    "settings.editor.selected.configurable": "preferences.rainbow.brackets.indent"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sofia_Shilova/PycharmProjects/Education/tests/web_tests&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.rainbow.brackets.indent&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;,
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\tests" />
@@ -80,7 +87,7 @@
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\test_framework\core" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in fixture_test">
+  <component name="RunManager" selected="Python tests.pytest in web_tests">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -110,7 +117,7 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="pytest in fixture_test" type="tests" factoryName="py.test" nameIsGenerated="true">
+    <configuration name="pytest in web_tests" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="Education" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,14 +130,14 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/fixture_test&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/web_tests&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Docker.docker-compose-v3.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose-v3.yml.jenkins: Compose Deployment" />
-      <item itemvalue="Python tests.pytest in fixture_test" />
+      <item itemvalue="Python tests.pytest in web_tests" />
     </list>
     <recent_temporary>
       <list>
@@ -147,46 +154,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712562559406</updated>
-    </task>
-    <task id="LOCAL-00038" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714980768777</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1714980768777</updated>
-    </task>
-    <task id="LOCAL-00039" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714990796761</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1714990796761</updated>
-    </task>
-    <task id="LOCAL-00040" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714992472555</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1714992472555</updated>
-    </task>
-    <task id="LOCAL-00041" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714992551635</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1714992551635</updated>
-    </task>
-    <task id="LOCAL-00042" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714995552933</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1714995552933</updated>
     </task>
     <task id="LOCAL-00043" summary="New project">
       <option name="closed" value="true" />
@@ -540,7 +507,47 @@
       <option name="project" value="LOCAL" />
       <updated>1715756984724</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715777476160</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1715777476160</updated>
+    </task>
+    <task id="LOCAL-00088" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715840732552</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1715840732552</updated>
+    </task>
+    <task id="LOCAL-00089" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715841379129</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1715841379129</updated>
+    </task>
+    <task id="LOCAL-00090" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715841552420</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1715841552420</updated>
+    </task>
+    <task id="LOCAL-00091" summary="New project">
+      <option name="closed" value="true" />
+      <created>1715842523291</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1715842523291</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -565,6 +572,11 @@
           <url>file://$PROJECT_DIR$/tests/api_tests/test_booking_api.py</url>
           <line>45</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/web_tests/test_add_to_library.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
