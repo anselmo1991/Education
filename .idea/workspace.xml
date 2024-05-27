@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22e0cee-d2ca-4495-84fd-e5868962f209" name="Changes" comment="New project">
-      <change afterPath="$PROJECT_DIR$/page_objects/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_objects/book_items.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/book_items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_objects/book_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/book_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_objects/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_objects/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_objects/my_library.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/my_library.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_objects/search_results_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/search_results_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/web_tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/web_tests/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/web_tests/test_add_to_library.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/web_tests/test_add_to_library.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,34 +81,91 @@
       <recent name="C:\Users\Sofia_Shilova\PycharmProjects\Education\test_framework\core" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in web_tests">
+  <component name="RunManager" selected="Python tests.pytest for test_lit.test_litgorod_filter_by_fantasy">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose-v3.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="docker-compose-v3.yml" />
-        </settings>
-      </deployment>
+    <configuration name="pytest for test_add_to_library.test_the_book_has_been_added_to_the_library" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Education" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/web_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_add_to_library.test_the_book_has_been_added_to_the_library&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose-v3.yml.jenkins: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="services">
-            <list>
-              <option value="jenkins" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose-v3.yml" />
-        </settings>
-      </deployment>
+    <configuration name="pytest for test_lit.test_litgorod_filter_by_fantasy" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Education" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/web_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_lit.test_litgorod_filter_by_fantasy&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_lit.test_litgorod_sort_comments_by_desc" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Education" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/web_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_lit.test_litgorod_sort_comments_by_desc&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_other_add_to_library_flow.test_the_book_has_been_added_to_the_library" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Education" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/web_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_other_add_to_library_flow.test_the_book_has_been_added_to_the_library&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_add_to_library.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Education" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/web_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/web_tests/test_add_to_library.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in web_tests" type="tests" factoryName="py.test" nameIsGenerated="true">
@@ -135,14 +186,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose-v3.yml: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose-v3.yml.jenkins: Compose Deployment" />
       <item itemvalue="Python tests.pytest in web_tests" />
+      <item itemvalue="Python tests.pytest for test_lit.test_litgorod_filter_by_fantasy" />
+      <item itemvalue="Python tests.pytest for test_lit.test_litgorod_sort_comments_by_desc" />
+      <item itemvalue="Python tests.pytest for test_other_add_to_library_flow.test_the_book_has_been_added_to_the_library" />
+      <item itemvalue="Python tests.pytest for test_add_to_library.test_the_book_has_been_added_to_the_library" />
+      <item itemvalue="Python tests.pytest in test_add_to_library.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose-v3.yml.jenkins: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose-v3.yml: Compose Deployment" />
+        <item itemvalue="Python tests.pytest for test_lit.test_litgorod_filter_by_fantasy" />
+        <item itemvalue="Python tests.pytest for test_lit.test_litgorod_sort_comments_by_desc" />
+        <item itemvalue="Python tests.pytest for test_other_add_to_library_flow.test_the_book_has_been_added_to_the_library" />
+        <item itemvalue="Python tests.pytest for test_add_to_library.test_the_book_has_been_added_to_the_library" />
+        <item itemvalue="Python tests.pytest in test_add_to_library.py" />
       </list>
     </recent_temporary>
   </component>
@@ -154,14 +211,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712562559406</updated>
-    </task>
-    <task id="LOCAL-00043" summary="New project">
-      <option name="closed" value="true" />
-      <created>1714998221909</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1714998221909</updated>
     </task>
     <task id="LOCAL-00044" summary="New project">
       <option name="closed" value="true" />
@@ -547,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715842523291</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="New project">
+      <option name="closed" value="true" />
+      <created>1716359488459</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1716359488459</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -574,9 +631,24 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/web_tests/test_add_to_library.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/page_objects/header.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/page_objects/header.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/web_tests/test_other_add_to_library_flow.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/page_objects/search_results_page.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

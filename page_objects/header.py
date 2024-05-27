@@ -24,7 +24,9 @@ genre_dropdown = elements({
     "PC": "//li[@class='b-header_dropdown__link']/a",
     "MOBILE": '//li[contains(@class,"b-header_sidebar__genre_link")]/a'})
 burger_menu = browser.element('//div[@class="b-header__menu_mobile"]//li[1]/a')
-list_of_burger_menu = browser.element('//div[@class="b-header_sidebar__list"]//li[6]/a')
+list_of_burger_menu = element({
+    "PC": '//div[@class="b-header_sidebar__list"]//li[6]/a',
+    "MOBILE": '//div[@class="b-header_sidebar__list"]//li[2]/a'})
 
 
 @allure.step("Open login form")
@@ -44,6 +46,8 @@ def fill_password_form():
 
 @allure.step("Click login button")
 def click_login_button():
+    if PLATFORM == "MOBILE":
+        browser.driver.hide_keyboard()
     login_button.should(be.visible).click()
 
 
@@ -59,7 +63,6 @@ def open_books_dropdown():
     if PLATFORM == "MOBILE":
         burger_menu.should(be.visible).click()
         list_of_burger_menu.should(be.visible).click()
-        books_dropdown.should(be.visible).click()
 
 
 @allure.step("Find genre in dropdown")

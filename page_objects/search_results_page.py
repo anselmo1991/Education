@@ -12,6 +12,7 @@ comments_filter = element({
 books = elements({
     "PC": "//div[@class='b-book_item']",
     "MOBILE": "//div[@class='b-book_item']"})
+# tags = browser.element
 search_field = element({
     "PC": "//div[@class='b-input b-input-block']//input",
     "MOBILE": "//div[@class='b-input b-input-block']//input"})

@@ -29,7 +29,7 @@ class BookElement(Element):
     def number_of_comments(self):
         return self.element(locator_for_platform({
             "PC": './/div[contains(@class,"b-btn-mobile_none")]//div[@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]',
-            "MOBILE": './/div[contains(@class,"b-btn-mobile_none")]//div[@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]'
+            "MOBILE": './/div[contains(@class,"b-btn-desktop_none")]//div[@class="b-book_item__counters"]/div/div[2]//div[@class="_cnt"]'
         }))
 
     def book_menu_button(self):
